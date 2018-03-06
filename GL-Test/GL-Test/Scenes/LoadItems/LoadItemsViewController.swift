@@ -101,7 +101,7 @@ class LoadItemsViewController: UITableViewController, LoadItemsDisplayLogic
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? LoadItemsTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LoadItemsTableViewCell else {
             return UITableViewCell()
         }
         
