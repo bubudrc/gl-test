@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svw-Pc-WFN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item Detail View Controller-->
+        <scene sceneID="Utn-gT-Mg5">
+            <objects>
+                <viewController storyboardIdentifier="ItemDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="svw-Pc-WFN" customClass="ItemDetailViewController" customModule="GL_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0s7-kf-eEr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="thr-UB-cRq">
+                                <rect key="frame" x="127" y="20" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="thr-UB-cRq" secondAttribute="height" multiplier="1:1" id="R7B-wq-gEs"/>
+                                    <constraint firstAttribute="width" constant="120" id="s3Z-l5-Uwc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTX-if-0rn">
+                                <rect key="frame" x="20" y="160" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="BhD-8s-8xW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="\" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIi-KU-Eug">
+                                <rect key="frame" x="20" y="223" width="335" height="360"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="thr-UB-cRq" firstAttribute="top" secondItem="JXY-GR-dla" secondAttribute="top" constant="20" id="0pn-UP-dPI"/>
+                            <constraint firstItem="PIi-KU-Eug" firstAttribute="leading" secondItem="rTX-if-0rn" secondAttribute="leading" id="KUH-jc-lcP"/>
+                            <constraint firstItem="JXY-GR-dla" firstAttribute="bottom" secondItem="PIi-KU-Eug" secondAttribute="bottom" constant="20" id="Kon-jU-1dK"/>
+                            <constraint firstItem="rTX-if-0rn" firstAttribute="leading" secondItem="JXY-GR-dla" secondAttribute="leading" constant="20" id="MjV-XL-DG7"/>
+                            <constraint firstItem="PIi-KU-Eug" firstAttribute="width" secondItem="rTX-if-0rn" secondAttribute="width" id="Qrc-1S-gYZ"/>
+                            <constraint firstItem="rTX-if-0rn" firstAttribute="top" secondItem="thr-UB-cRq" secondAttribute="bottom" constant="20" id="bas-rh-jkV"/>
+                            <constraint firstItem="JXY-GR-dla" firstAttribute="trailing" secondItem="rTX-if-0rn" secondAttribute="trailing" constant="20" id="bbL-8D-gqQ"/>
+                            <constraint firstItem="thr-UB-cRq" firstAttribute="centerX" secondItem="JXY-GR-dla" secondAttribute="centerX" id="lMO-mV-SjW"/>
+                            <constraint firstItem="PIi-KU-Eug" firstAttribute="top" secondItem="rTX-if-0rn" secondAttribute="bottom" constant="42" id="uiR-M1-Hd4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JXY-GR-dla"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="itemDescriptionTextView" destination="PIi-KU-Eug" id="wjF-Yl-SJ6"/>
+                        <outlet property="itemImageView" destination="thr-UB-cRq" id="FZo-S6-8Gj"/>
+                        <outlet property="itemTitleLabel" destination="rTX-if-0rn" id="vy8-nB-nWC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6K-GE-joF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114.40000000000001" y="173.16341829085459"/>
+        </scene>
+    </scenes>
+</document>
